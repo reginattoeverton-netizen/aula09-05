@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+    /* Cores */
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --dark: #1e29eb;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-700: #334155;
+    --gray-800: #1e293b;
+    --gray-900: #0f172a;
+
+    /* espacamento */
+    --sidebar-width: 260px;
+    --sidebar-collapsed: 72px;
+    --header-height: 70px;
+
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.01);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.01);
+
+}
+
+ body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--gray-100);
+    color: var(--gray-800);
+    overflow-x: hidden;
+ }
+
+ .dashboard {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    min-height: 100vh;
+    transition: grid-template-columns 0.3s ease;
+
+ }
+
+ .dashboard.sidebar-collapsed {
+    grid-template-columns: var(--sidebar-collapsed) 1fr;
+ }
+
+ .sidebar {
+    background: linear-gradient(180deg, var(--gray-900) 0%);
+    color: #cbd5e1;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4 ease;
+ }
+ .sidebar-header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+ .logo
+ {
+   display: flex;
+   align-items: center;
+   gap: 0.75rem;
+   font-size: 1.25rem;
+   font-weight: 700;
+   white-space: nowrap;
+ }
+.logo i {
+    font-size: 1.5rem;
+    color: var (--primary);
+}
+
+.sidebar-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.25rem;
+    border-radius: 0.375rem;
+    transition: background 0.2s;
+}
+
+.sidebar-toggle:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 1.5rem 0;
+}
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin-bottom: 5px;
+}
+
+.sidebar-nav li a {
+    display: flex;
+   align-items: center;
+   gap: 0.75rem;
+   padding: 0.75rem 1.5rem;
+   color: var (--gray-300);
+   text-decoration: none;
+   transition: all 0.2s;
+   white-space: nowrap;
+}
+.sidebar-nav li a i {
+    width: 1.25rem;
+    font-size: 1.1rem;
+
+}
+
+.sidebar-nav li:hover a {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sidebar-nav li:active a {
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.5rem;
+    margin: 0 0.75rem;
+    padding: 0.75rem 0.75rem;
+    
+}
+
+.sidebar-footer {
+    padding: 1rem 1.5rem;
+    margin-top: 1px solid rgba(255, 255, 255, 0.1) ;
+}
+
+.sidebar-footer a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--gray-300);
+    text-decoration: none;
+    padding: 0.5rem 0 ;
+}
+
+.main-content {
+    overflow-x: hidden;
+}
+
+.topbar {
+    background-color: #fff;
+    height: var(--header-height);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-200);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.search-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var (--gray-100);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    width: 300px;
+}
+
+.search-area i {
+    color: var(--gray-300);
+}
+
+.search-area input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 0.875rem;
+}
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--gray-700);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background 0.2s;
+}
+
+.notification {
+    position: relative;
+    cursor: pointer;
+
+}
+
+.notification i {
+    font-size: 1.2rem;
+    color: var(--gray-700);
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--danger);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 1rem;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+
+}
+
+.user-profile img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main {
+    padding: 2rem;
+
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.page-header p {
+   color: var(--gray-700);
+}
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.card {
+    background-color: #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2,box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.card-info {
+    text-align: right;
+}
+
+.card-info h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    margin-bottom: 0.25rem;
+}
+
+.card-info .value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.trend {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    background: var(--gray-100);
+}
+
+.trend.up {
+    color: var(--secondary);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.trend.down {
+    color: var(--danger);
+    background: rgba(239, 68, 68, 0.1);
+}
