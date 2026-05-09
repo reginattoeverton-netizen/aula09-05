@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard SENAI </title>
+</head>
+<body>
+    <div class="dashboard">
+       <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+            <i class="fas fa-chart-line"></i>
+            <span>AdminPro</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+       
+       <nav class="sidebar-nav">
+        <ul>
+            <li class="active">
+                <a href="#">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li >
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span>Usuarios</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Vendas</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Relatorios</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </a>
+            </li>
+           
+            
+        </ul>
+       </nav>
+
+       <div class="sidebar-footer">
+        <a href="#">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Sair</span>
+        </a>
+       </div>
+    </div>
+</aside>
+
+ <div class="main-content">
+    <header class="topbar">
+        <div class="search-area">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Pesquisar....">
+        </div>
+        <div class="search-area">
+            <button class="dark-mode-toggle" id="darkModelToggle">
+            <i class="fas fa-moon"></i>
+            </button>
+      
+        <div class="notification">
+            <i class="fas fa-bell"></i>
+            <span class="badge">3</span>
+        </div>
+
+        <div class="user-profile">
+            <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Avatar">
+            <span>Everton Reginatto</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Dashboard</h1>
+            <p>Bem-Vindo de volta, Everton! Aqui está o resumo do seu negócio.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Faturamento</h3>
+                    <p class="value">R$ 47.892</p>
+                    <span class="trend-up">+12,5%</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Clientes</h3>
+                    <p class="value">R$ 1.284</p>
+                    <span class="trend-up">+8,2%</span>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Vendas</h3>
+                            <p class="value">R$ 3.421</p>
+                            <span class="trend-down">-2,1%</span>
+                            <div class="card">
+                                <div class="icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h3>Conversão</h3>
+                                    <p class="value">R$ 23,8%</p>
+                                    <span class="trend-up">+5,3%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-header">
+                <h2>Pedidos recentes</h2>
+                <a href="#" class="btn-link">Ver Todos <i class="fas fa-arrow-right"></i> </a>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Produto</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Amanda Oliveira </td>
+                        <td>Teclado Mecãnico</td>
+                        <td>13/02/2026</td>
+                        <td class="status sucess">Concluído</td>
+                        <td>290,90</td>
+                    </tr>
+                    <tr>
+                        <td> Zezinho Galindo </td>
+                        <td>Monitor 29</td>
+                        <td>03/05/2026</td>
+                        <td class="status warning">Processando</td>
+                        <td>2900,90</td>
+                    </tr>
+                    <tr>
+                        <td> Pimenta Arenas </td>
+                        <td>Mousse Gamer</td>
+                        <td>23/05/2026</td>
+                        <td class="status warning">Processando</td>
+                        <td>100,00</td>
+                    </tr>
+                    <tr>
+                        <td> Inês Aparecido </td>
+                        <td>IPhone15</td>
+                        <td>07/01/2026</td>
+                        <td class="status danger">Cancelado</td>
+                        <td>1290,90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="charts-row">
+            <div class="chart-card">
+                <h3>Vendas do mês</h3>
+                <div class="bar-chart">
+                    <div class="bar-item" style="height: 40px;"data-value=40%>Jan</div>
+                    <div class="bar-item" style="height: 65px;"data-value=65%>Fev</div>
+                    <div class="bar-item" style="height: 55px;"data-value=55%>Mar</div>
+                    <div class="bar-item" style="height: 80px;"data-value=80%>Abr</div>
+                    <div class="bar-item" style="height: 70px;"data-value=70%>Mai</div>
+                    <div class="bar-item" style="height: 95px;"data-value=95%>Jun</div>
+                </div>
+            </div>
+        </div>
+    </main>
+ </div>
+ <script>
+    
+ </script>
+</body>
+</html>
